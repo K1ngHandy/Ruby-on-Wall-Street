@@ -10,12 +10,25 @@
     <p>See console...</p>
 
     <script>
+      // Immutable values
       let totalMoney = 100000; // amount to invest
       let highRiskMoney = totalMoney; // amount to invest in high risk/reward (all)
       totalMoney = 5000; // reassign totalMoney with updated investment amount
 
       console.log(totalMoney);
       console.log(highRiskMoney);
+
+      // Mutable values
+      let investmentCapital = {
+        totalMoney: 100000,
+      };
+
+      let highRiskCapital = investmentCapital; // copy
+
+      investmentCapital.totalMoney = 5000; // reassignment
+
+      console.log(investmentCapital.totalMoney);
+      console.log(highRiskCapital.totalMoney);
     </script>
   </body>
 </html>
